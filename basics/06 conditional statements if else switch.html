@@ -52,8 +52,39 @@
     if (x > y) {
         console.log("x jest większe do y")
     } else {
-        
+        console.log("x jest mniejsze od y")
     }
+
+
+    let topSpeed = 100;
+
+    switch (topSpeed) {
+        case 100:
+            console.log("Mała prędkość maksymalna");
+            break;
+        case 150:
+            console.log("Prędkość 150 km/h");
+            break;
+        case 200:
+            console.log("Szybko: 200km/h");
+            break;
+        case 250:
+            console.log("Wow 250km/h");
+            break;
+        case 300:
+            console.log("Bardzo szybko 300km/h");
+            break;
+
+        case 310:
+        case 320:
+        case 330:
+            console.log("Prędkosć powyżej 300 km/h");
+            break;
+        default:
+            console.log("Brak informacji dla tej prędkości");
+    }
+
+
         
     </script>
 </body>
