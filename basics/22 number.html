@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //number - typ wartości zmiennoprzecinkowy 64 bitowy
+        //number pozwala na zapis liczb całkowitych i dziesiętnych
+
+        let a = 1; //całkowita
+        let b = 1.456 // liczba dziesiętna, zmiennoprzcinkowa
+        let c = 0xf; //15
+        let d = .45 //to samo co 0.45 więc można pominąc zero
+
+        //maksymalna bezpieczna liczba całkowita dodatnia i ujemna
+        console.log( Number.MAX_SAFE_INTEGER) //max liczba całkowita, którą możemy zapisać w zmiennej czy stałej
+        console.log( Number.MIN_SAFE_INTEGER) //min liczba całkowita, którą możemy zapisać w zmiennej czy stałej
+
+        console.log( Number.isSafeInteger(9007199254740991)); //true
+        console.log( Number.isSafeInteger(90071992547409912)); //false - nie jest bezpieczna liczba całkowita
+
+        //NaN - Not a number - specjalna wartość, ktora określa, ze cos nie jest liczbą
+
+        const someNaN = 0 / 0;
+
+        console.log(someNaN); //NaN
+        console.log( Math.sqrt(-1) ); // Nan
+
+        //parseInt() - konwersja łańcucha znaków na liczbę
+
+        let someNum = parseInt("12.345");
+        console.log(someNum); //12 liczba całkowita
+        console.log( parseInt("tekst12.345") ); //NaN - nie udała się konwersja
+
+        console.log( isNaN(0/0) ); //true - bo 0/0 daje Nan
+        console.log( Number.isNaN(67) ); // false - 
+ 
+    </script>
+</body>
+</html>

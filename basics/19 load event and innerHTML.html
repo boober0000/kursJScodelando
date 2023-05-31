@@ -11,21 +11,30 @@
 </head>
 <body>
 
-<!-- zdarzenie load jest wykonane gdy wzaładowane są obrazki, -->
+<!-- zdarzenie load jest wykonane gdy wzaładowane są obrazki, kod HTML, obrazki i CSS -->
 
     <script>
-        window.addEventListener("load", function () {
-            console.log("load event");
-            let div = document.getElementById("content");
-            div.innerHTML = "<b>Hello world!</b>";
+                function setContentToHtml(id, content) {
+                    let div = document.getElementById(id);
+                    console.log(div);
+                    div.innerHTML = content;
+                };
 
-        })
+                window.addEventListener("load", function () {
+                    console.log("load event");
+                    setContentToHtml("content1", "Hello World!!");
+
+                });
+
+                window.onload = function () {
+                    console.log("onload czyli load event!");
+                    setContentToHtml("content2", "<b>Hello World!</b>");
+                }
     </script>
 
-<div id="content"></div>
+<div id="content1"></div>
 
-
-
+<div id="content2"></div>
 
 
 

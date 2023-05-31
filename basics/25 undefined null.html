@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a; // zmienna jest zadeklarowana
+        console.log(a); // undefined, nie ma wartości w zmiennej
+
+        if(a == undefined) {
+            console.log("brak wartości")
+        }
+
+        // b; 
+        // błąd: Uncaught ReferenceError : b is not defined
+        // w praktyce zmienna jest niezadeklarowana bo nie ma użytego let, const czy var
+
+        console.log(typeof b); //undefined
+
+        
+        //null - instencjonalne wskazaniem że zmienna nie ma wartości
+        let test = 5;
+        console.log(test); //5
+
+        test = null; //przypisanie null przez programistę, że nie ma 
+        console.log(test); //null
+        console.log(typeof null); //"object"
+
+        //null i undefined to falsy values - fałszywe wartości
+        if(null) console.log("nie wykona się, bo null na false");
+        if(undefined) console.log("nie wykona się, bo undefined ma false");
+
+        //porównanie proste
+        if(null == undefined) console.log("wykona się bo true");
+
+        //porównanie ścisłe, porównuje zarówno typ jak i wartość
+        if(null === undefined) console.log("nie wykona się");
+
+                    
+
+
+    </script>
+</body>
+</html>

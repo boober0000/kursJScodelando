@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //boolean - wartość logiczna - true albo fals (słowa kluczowe)
+
+        let flag = true;
+        if(flag == true) {
+            console.log("prawda!")
+        }
+
+        if (flag == false) { //nie wykona się bo flaf ma false
+            console.log("prawda!")
+        }
+
+        if (flag) console.log("Skrótowo i prawda!");
+
+        //wykrzyknik odwraca wwartość logiczną czyli sprawdzamy poniżej czy jest flase
+        if (!flag) console.log("Skrótowo i prawda!");
+        console.log(true); //true
+        console.log(!true); //false - odwórcona przez !
+        console.log(false); //false
+        console.log(!false); //true - odwórcona
+
+        if (4 > 1) { //wynikiem jest true czyli if się wykona
+            console.log(" 4 > 1")
+        };
+
+
+        //falsy values - "fałszywe wartości"
+
+        let data = "";
+        if (data) { //data będzie zamienione na wartość boolean, nazywamy to konwersją z jednego typu wartośći na inny
+                    //pusty string skonwertowany na boolean czyli fałsz
+            console.log("prawda!")
+        };
+
+        // let data2 = "tekst"; //truthly values
+        // if (data2) { //data będzie zamienione na wartość boolean, nazywamy to konwersją z jednego typu wartośći na inny
+        //             //wypełniony string skonwertowany na boolean czyli fałsz
+        //     console.log("prawda!")
+        // };
+
+            //falsy values zawsze konwetowawne są na false!
+            //"" pusty string
+            //0, -0
+            // 0n BigInt
+            //NaN
+            //null
+            //undefined
+            //false
+
+            let data3 = null;
+            if(data3) { //null skonwertowany na false
+                console.log("data3 ma wartość true")
+            } else {
+                console.log("data3 ma wartość false");
+            }
+            //data3 ma wartość false
+
+            //truthly values - prawzdiwe wartości
+            // te wartości konwerutją na true
+            // -1, 1, 34 - liczby różne od zera
+            // [], [4,3,2]
+            //{}, {a:1}, window, {flag: false}
+            //function test() {}
+
+            let test = function () {};
+            if(test) console.log("prawda: ", test);
+
+
+            
+    </script>
+</body>
+</html>

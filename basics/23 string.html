@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // String - literały znakowe lub łańcuchowe
+        // siąg znaków UTF-16
+
+        const s1 = 'To jest tekst';
+        const s2 = "To też ekst";
+        
+        const num = 78;
+
+        // literał szablonu
+        const s3 = `
+        String w wielu
+        liniach ${num}
+        wyrażenia js: ${1 + 2 + 3}
+        `;
+
+        console.log(s3);
+
+        console.log("Tekst".length ); //5 znaków
+        console.log("".length); //0 znaków
+
+        console.log( "Tekst"[2] ); // k - po indeksie pobierzemy znak
+        console.log( s3[ s3.length - 1 ] ); //6
+        console.log( s3.charAt(15) ); //r
+
+        console.log( s3.charCodeAt(15) ); //114
+
+        //wyszukiwanie słów w teskcie
+        let simpleText = "Ala ma kota, a Ania ma psa";
+
+        let pos = simpleText.indexOf("Ania"); //Ania jst pod 15 indeksem      
+        console.log(pos);
+
+        pos = simpleText.lastIndexOf("ma");
+        console.log(pos); //20
+
+        //drugi argument od którego miejsca ma być wyszukanie
+        pos = simpleText.indexOf("ma", 6); // 20
+        console.log(pos);
+
+        pos = simpleText.lastIndexOf("ma", 10); // 4
+        console.log(pos);
+
+        // trim() - wycina białe znaki z początki u końca łańcucha
+        console.log( "     Tekst  coś  tttt    ".trim() );
+        console.log(`
+        
+               
+        test
+        `.trim());
+
+        //toUpperCase()
+        console.log( "ala".toUpperCase() ); //ALA
+
+        //toLowerCase()
+        console.log( "AUTO".toLowerCase() ); //auto
+
+
+        //łączenie łańcuchów znaków
+        const str1 = " something";
+        const resultStr = "text" + str1;
+        console.log(resultStr); //"text something"
+
+        let str2 = "test".concat( " other test");
+        console.log(str2); //test other test
+
+        //pobieranie fragmentów z string
+        let str5 ="01234567890"; 
+        console.log(str5.slice(2)); //234567890
+        console.log( str5.slice(4, 8) ); //4567
+        console.log( str5.slice(-3) ); // 890
+        console.log( str5.slice(-3, -2) ); // 8
+
+        console.log( str5.substr(0)); //01234567890
+        console.log( str5.substr(5)); //567890
+        console.log( str5.substr(5, 3)); //567
+
+        //split() dzieli string ze względu na przekazany znak
+        let str6 = "a1 b2 c3 d4 e";
+        let dataStr6 = str6.split(" "); //
+
+        console.log(dataStr6); //(5) ['a1', 'b2', 'c3', 'd4', 'e']0
+
+
+        //replace() zamienia słowa w stringu
+        let str7 = "Ala ma kota";
+        let str8 = str7.replace("kota", "psa");
+        console.log(str8); //Ala ma psa
+
+        // mutowalność vs niemutowalność 
+        //w JS tylko tablice i obiekty są mutowalne czyli moga być zmieniane
+        //Prymitywy jak String mogą przyjmować różne wartosći, ale przy każdej zmianie przyjmujemy nową wartość
+
+        let str9 = "Tekst";
+        str9[0] = "A";
+        console.log(str9); // Tekst, string i inne prymitywy są niemutowalne
+        let str10 = str9.replace("T", "A"); //zwróci nowy string
+        console.log(str10); //Aekst
+
+        //tablica jest mutowalna podobnie jak obiekty, przy zmianie wartości nie powstaje nowy obiekt tylko modyfikowany jest już istniejący
+        let arr = ["T", "E", "K", "S", "T" ]
+        arr[0] = "A";
+        console.log(arr); // ["A", "E", "K", "S", "T" ]
+        
+
+        let obj = { a:1 };
+        obj.a = 7;
+        console.log(obj); // {a: 7} czyli obiekt jest mutowalny
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
